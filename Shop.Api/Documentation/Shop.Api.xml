@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shop.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Shop.Api.Controllers.CustomersController.Get">
+            <summary>
+            Gets all customers from the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.CustomersController.Get(System.Guid)">
+            <summary>
+            Gets the corresponding customer to the provided <paramref name="id"/>
+            </summary>
+            <param name="id">Unique guid for the requested customer</param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.CustomersController.Post(Shop.Api.Models.RequestModels.CustomerRequestModel)">
+            <summary>
+            Creates customer and returns it with the generated id
+            </summary>
+            <param name="customer">Model for customer creation</param>
+            <returns>400 if creation fails</returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.CustomersController.Put(System.Guid,Shop.Api.Models.RequestModels.CustomerRequestModel)">
+            <summary>
+            Updates the customer which corresponds to the <paramref name="id"/>
+            </summary>
+            <param name="id">Customer's id</param>
+            <param name="customer">Model for customer update</param>
+            <returns>400 if the update fails</returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.CustomersController.Delete(System.Guid)">
+            <summary>
+            Deletes a customer
+            </summary>
+            <param name="id">The id of the customer to be deleted</param>
+            <returns>400 if the delete fails</returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.OrdersController.Get">
+            <summary>
+            Gets all orders from the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.OrdersController.Get(System.Guid)">
+            <summary>
+            Gets the corresponding order to the provided <paramref name="id"/>
+            </summary>
+            <param name="id">The id for the requested order</param>
+            <returns></returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.OrdersController.GetOrdersForCustomer(System.Guid)">
+            <summary>
+            Gets all the orders of the customer with the provided <paramref name="customerId"/>
+            sorted by the orders' date
+            </summary>
+            <param name="customerId">Customer's id</param>
+            <returns>204 if the customer has no orders or doesn't exist</returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.OrdersController.Post(Shop.Api.Models.RequestModels.OrderRequestModel)">
+            <summary>
+            Creates an order and returns it with the generated id
+            </summary>
+            <param name="order">Model for order creation</param>
+            <returns>400 if creation fails</returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.OrdersController.Put(System.Guid,Shop.Api.Models.RequestModels.OrderRequestModel)">
+            <summary>
+            Updates the order which corresponds to the <paramref name="id"/>
+            </summary>
+            <param name="id">Order's id</param>
+            <param name="order">Model for order update</param>
+            <returns>400 if the update fails</returns>
+        </member>
+        <member name="M:Shop.Api.Controllers.OrdersController.Delete(System.Guid)">
+            <summary>
+            Deletes an order
+            </summary>
+            <param name="id">The id of the order to be deleted</param>
+            <returns>400 if the delete fails</returns>
+        </member>
+        <member name="M:Shop.Api.DataAccess.Repositories.ProductRepository.DeleteAsync(System.Guid)">
+            <summary>
+            Can't be used
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+    </members>
+</doc>
